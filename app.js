@@ -38,7 +38,7 @@ const reviews = [
 ];
 //select items
 const img = document.getElementById("person-img");
-const author = document.getElementById("author");
+const author = document.getElementById("person");
 const job = document.getElementById("job");
 const info = document.getElementById("info");
 
@@ -47,3 +47,8 @@ const nextBtn = document.querySelector(".next-btn");
 const randomBtn = document.querySelector(".ramdon-btn");
 
 //select starting item
+let currentItem = 0;
+img.src = reviews[currentItem].img;
+author.textContent = reviews[currentItem].name;
+job.textContent = reviews[currentItem].job;
+info.textContent = reviews[currentItem].text;
