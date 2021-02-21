@@ -57,11 +57,17 @@ info.textContent = reviews[currentItem].text;
 }
 contentLoder();
 
+const nextContent = function(){
+
+  if (reviews.length > currentItem +1) currentItem++;
+  else currentItem = 0;
+  contentLoder();
+};
 
 
 
 
 
 //preBtn.addEventListener('click', preContent);
-//nextBtn.addEventListener('click', nextContent);
+nextBtn.addEventListener('click', nextContent);
 //randomBtn.addEventListener('click', randomContent);
