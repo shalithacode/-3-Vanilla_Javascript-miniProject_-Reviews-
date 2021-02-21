@@ -64,10 +64,15 @@ const nextContent = function(){
   contentLoder();
 };
 
+const preContent = function(){
+
+  if ( !currentItem == 0 ) currentItem--;
+  else currentItem = reviews.length-1;
+  contentLoder();
+};
 
 
 
-
-//preBtn.addEventListener('click', preContent);
+preBtn.addEventListener('click', preContent);
 nextBtn.addEventListener('click', nextContent);
 //randomBtn.addEventListener('click', randomContent);
