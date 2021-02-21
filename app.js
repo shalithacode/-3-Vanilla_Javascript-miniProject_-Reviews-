@@ -44,7 +44,7 @@ const info = document.getElementById("info");
 
 const preBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
-const randomBtn = document.querySelector(".ramdon-btn");
+const randomBtn = document.querySelector(".random-btn");
 
 //select starting item
 let currentItem = 0;
@@ -71,8 +71,12 @@ const preContent = function(){
   contentLoder();
 };
 
+const randomContent = function(){
 
+  currentItem =Number( Math.trunc(Math.random() * reviews.length));
+  contentLoder();
+};
 
 preBtn.addEventListener('click', preContent);
 nextBtn.addEventListener('click', nextContent);
-//randomBtn.addEventListener('click', randomContent);
+randomBtn.addEventListener('click', randomContent);
