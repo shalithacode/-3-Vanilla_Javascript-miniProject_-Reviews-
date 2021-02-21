@@ -49,31 +49,31 @@ const randomBtn = document.querySelector(".random-btn");
 //select starting item
 let currentItem = 0;
 
-const contentLoder = function(){
-img.src = reviews[currentItem].img;
-author.textContent = reviews[currentItem].name;
-job.textContent = reviews[currentItem].job;
-info.textContent = reviews[currentItem].text;
+const contentLoder = function () {
+  img.src = reviews[currentItem].img;
+  author.textContent = reviews[currentItem].name;
+  job.textContent = reviews[currentItem].job;
+  info.textContent = reviews[currentItem].text;
 }
 contentLoder();
 
-const nextContent = function(){
+const nextContent = function () {
 
-  if (reviews.length > currentItem +1) currentItem++;
+  if (reviews.length > currentItem + 1) currentItem++;
   else currentItem = 0;
   contentLoder();
 };
 
-const preContent = function(){
+const preContent = function () {
 
-  if ( !currentItem == 0 ) currentItem--;
-  else currentItem = reviews.length-1;
+  if (!currentItem == 0) currentItem--;
+  else currentItem = reviews.length - 1;
   contentLoder();
 };
 
-const randomContent = function(){
+const randomContent = function () {
 
-  currentItem =Number( Math.trunc(Math.random() * reviews.length));
+  currentItem = Number(Math.trunc(Math.random() * reviews.length));
   contentLoder();
 };
 
