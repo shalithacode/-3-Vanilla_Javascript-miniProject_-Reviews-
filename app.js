@@ -48,7 +48,20 @@ const randomBtn = document.querySelector(".ramdon-btn");
 
 //select starting item
 let currentItem = 0;
+
+const contentLoder = function(){
 img.src = reviews[currentItem].img;
 author.textContent = reviews[currentItem].name;
 job.textContent = reviews[currentItem].job;
 info.textContent = reviews[currentItem].text;
+}
+contentLoder();
+
+
+
+
+
+
+//preBtn.addEventListener('click', preContent);
+//nextBtn.addEventListener('click', nextContent);
+//randomBtn.addEventListener('click', randomContent);
